@@ -30,6 +30,12 @@
     [self.view addSubview:activityIndicatorView];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if ([PFUser currentUser]) {
+        [self goToMainPage];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
